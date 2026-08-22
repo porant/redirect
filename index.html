@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мы переехали на новый адрес</title>
+    <!-- Резервный редирект через 10 секунд -->
+    <meta http-equiv="refresh" content="10; url=https://azamat799.e-e-e.ru/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #080808;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .card {
+            background-color: #0d0d0f;
+            border: 1px solid #2d2613;
+            border-radius: 8px;
+            padding: 28px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Верхняя строка статуса */
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #71717a;
+            margin-bottom: 16px;
+        }
+
+        .status {
+            color: #059669;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Заголовок в стиле имени донатера */
+        .header-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #dfa300;
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .domain-tag {
+            color: #dfa300;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .domain-tag span {
+            color: #71717a;
+            font-size: 12px;
+            font-weight: 700;
+            margin-left: 4px;
+        }
+
+        /* Внутренний блок в стиле плеера */
+        .player-box {
+            background: #09090b;
+            border: 1px solid #332a15;
+            border-radius: 6px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .player-top {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .play-btn {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background-color: #cca018;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #09090b;
+        }
+
+        .play-btn svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 2px;
+        }
+
+        .player-info {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .player-label {
+            color: #cca018;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .timer-val {
+            color: #71717a;
+            font-weight: 500;
+        }
+
+        /* Прогресс-бар */
+        .progress-track {
+            width: 100%;
+            height: 6px;
+            background: #1f1f23;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 100%;
+            height: 100%;
+            background: #cca018;
+            border-radius: 4px;
+            transition: width 1s linear;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #a1a1aa;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Основная кнопка */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            background: #cca018;
+            color: #09090b;
+            font-weight: 800;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #dfa300;
+            box-shadow: 0 0 15px rgba(223, 163, 0, 0.35);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="top-bar">
+            <span>Редирект</span>
+            <span class="status">✓ Активен</span>
+        </div>
+
+        <div class="header-title">
+            <h1>САЙТ ПЕРЕЕХАЛ</h1>
+            <div class="domain-tag">azamat799<span>NEW</span></div>
+        </div>
+
+        <p class="description">
+            Мы перенесли сервер на новый адрес. Вы будете автоматически перенаправлены.
+        </p>
+
+        <!-- Блок в стиле плеера голосового доната -->
+        <div class="player-box">
+            <div class="player-top">
+                <div class="play-btn">
+                    <!-- Иконка Play -->
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+                <div class="player-info">
+                    <span class="player-label">
+                        🔊 Автопереход
+                    </span>
+                    <span class="timer-val"><span id="timer">10</span> сек</span>
+                </div>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <a href="https://azamat799.e-e-e.ru/" class="btn">
+            Перейти прямо сейчас
+        </a>
+    </div>
+
+    <script>
+        const targetUrl = "https://azamat799.e-e-e.ru/";
+        let timeLeft = 10;
+        const totalTime = 10;
+
+        const timerElement = document.getElementById('timer');
+        const progressElement = document.getElementById('progress');
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            if (timeLeft >= 0) {
+                timerElement.textContent = timeLeft;
+                const percentage = (timeLeft / totalTime) * 100;
+                progressElement.style.width = percentage + '%';
+            }
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
